@@ -1,6 +1,6 @@
 
 resource "aws_lb_target_group" "test" {
-  name     = "tf-example-lb-tg1"
+  name     = "tf-example-lb-tg-2"
   port     = 8080
   protocol = "HTTP"
   vpc_id   = aws_vpc.vpc1.id
