@@ -1,0 +1,29 @@
+host bashion-1
+  Hostname 54.254.183.22
+  user ec2_user
+  Port 22
+  IdentityFile  /Users/apple/Downloads/jenkins-key-2.pem
+  IdentitiesOnly yes
+
+Host private-1
+  Hostname 10.0.3.212
+  User ec2_user
+  Port 22
+  IdentityFile  /Users/apple/Downloads/jenkins-key-2.pem
+  IdentitiesOnly yes
+  ProxyJump bashion-1
+
+host bashion-2
+  Hostname 18.143.77.92
+  User ec2_user
+  Port 22
+  IdentityFile  /Users/apple/Downloads/jenkins-key-2.pem
+  IdentitiesOnly yes
+
+Host private-2
+  Hostname 10.0.4.205
+  User ec2_user
+  Port 22
+  IdentityFile  /Users/apple/Downloads/jenkins-key-2.pem
+  IdentitiesOnly yes
+  ProxyJump bashion-2
