@@ -14,17 +14,17 @@ pipeline {
                 }
             }
         }
-        stage('Terraform Plan') {
-            steps {
-                script {
-                    sh 'terraform plan '
-                }
-            }
-        }
+        // stage('Terraform Plan') {
+        //     steps {
+        //         script {
+        //             sh 'terraform plan '
+        //         }
+        //     }
+        // }
         stage('Terraform Apply') {
             steps {
                 script {
-                    sh 'terraform apply -auto-approve tfplan'
+                    sh 'terraform apply --auto-approve '
                 }
             }
         }
