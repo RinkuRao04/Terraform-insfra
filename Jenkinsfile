@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    environment {
-        AWS_DEFAULT_REGION = 'your-aws-region'
-    }
+    
     stages {
         stage('Checkout Code') {
             steps {
@@ -30,13 +28,7 @@ pipeline {
                 }
             }
         }
-        stage('Upload State to S3') {
-            steps {
-                script {
-                    sh 'aws s3 cp terraform.tfstate s3://your-bucket-name'
-                }
-            }
-        }
+        
     }
     post {
         always {
