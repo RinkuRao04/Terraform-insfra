@@ -5,6 +5,12 @@ terraform {
       version = "~> 5.60.0"
     }
   }
+  backend "s3" {
+    bucket         	   = "mycomponents-tfstate-01"
+    key                = "state/terraform.tfstate"
+    region         	   = "var.region"
+   
+  }
 }
 
 #Connect with aws account using secret_key and access_id 

@@ -1,5 +1,5 @@
 resource "aws_lb" "test" {
-  name               = "test-lb-tf-2"
+  name               = "test-lb-tf"
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.security2.id]
